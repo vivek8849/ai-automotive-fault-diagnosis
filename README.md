@@ -1,4 +1,9 @@
+![Demo](docs/demo.png)
+
 # 🚗 AI Automotive Fault Diagnosis & Explainable AI System
+![Repo Size](https://img.shields.io/github/languages/code-size/vivek8849/ai-automotive-fault-diagnosis)
+![License](https://img.shields.io/github/license/vivek8849/ai-automotive-fault-diagnosis)
+![Last Commit](https://img.shields.io/github/last-commit/vivek8849/ai-automotive-fault-diagnosis)
 
 An end-to-end **automotive fault diagnosis platform** that combines **machine learning**, **rule-based engineering logic**, and **large language model (LLM)–powered explainability**, built with a **production-style architecture** and fully **Dockerized deployment**.
 
@@ -126,23 +131,29 @@ The ML model is intentionally kept simple and interpretable to emphasize:
 
 ## 🚀 Features
 
-- Predicts automotive fault types from sensor inputs
-- Rule-based fault severity classification (Low / Medium / High)
-- Generates detailed natural-language explanations using an LLM
-- Interactive web-based UI
-- RESTful API with automatic documentation
-- Fully containerized deployment
+| Feature | Description |
+| :--- | :--- |
+| ML Inference | Predicts vehicle faults using sensor data |
+| Severity Logic | Rule-based classification of severity |
+| Explainability | Natural-language explanations via LLM |
+| Deployment | Dockerized microservices |
+| UI | Interactive Streamlit dashboard |
 
 ---
 
 ## 📊 Results
 
-The system successfully:
-- Predicts automotive fault categories from structured sensor data
-- Assigns deterministic severity levels using rule-based logic
-- Generates detailed, human-readable diagnostic explanations using a locally hosted large language model
+### 🚗 ML Prediction
+The system predicts automotive fault categories from structured sensor data.
 
-This validates a **complete, end-to-end explainable AI pipeline** suitable for automotive diagnostic use cases.
+### ⚠️ Severity Classification
+Deterministic rule-based logic assigns severity levels (Low/Medium/High).
+
+### ✍️ Explainable AI Output
+Detailed natural-language explanations are generated using a locally hosted LLM (Mistral via Ollama).
+
+### 🧪 Validation
+The pipeline flow has been validated end-to-end through Dockerized deployment and UI interaction.
 
 ---
 
@@ -164,21 +175,26 @@ docker compose up --build
 - #### Streamlit UI: http://localhost:8501
 - #### API Docs (Swagger): http://localhost:8000/docs
 
+### Testing
+
+Run:
+```bash
+pytest
+```
 ---
 
 ## 📁 Project Structure
 ```
 ai-automotive-fault-diagnosis/
-│
 ├── src/
 │   ├── api/          # FastAPI backend
 │   ├── ml/           # ML training & inference
-│   ├── llm/          # Explainable AI layer
-│   └── utils/
-│
+│   ├── llm/          # Explainable AI logic
+│   └── utils/        # Helper modules
 ├── ui/               # Streamlit frontend
-├── models/           # Trained ML models
-├── data/             # Datasets
+├── models/           # Saved models
+├── data/             # Processed & sample data
+├── docs/             # Screenshots & diagrams
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
