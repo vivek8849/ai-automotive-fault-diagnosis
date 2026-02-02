@@ -22,9 +22,9 @@ if st.button("🔍 Diagnose Vehicle"):
 
     try:
         response = requests.post(
-            "http://127.0.0.1:8000/predict",
-            json=payload
-        )
+        "http://api:8000/predict",
+        json=payload
+    )   
 
         if response.status_code == 200:
             result = response.json()

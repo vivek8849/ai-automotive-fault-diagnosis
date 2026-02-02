@@ -20,7 +20,6 @@ with open("models/fault_classifier.pkl", "rb") as f:
 with open("models/label_encoder.pkl", "rb") as f:
     label_encoder = pickle.load(f)
 
-
 @app.get("/")
 def health_check():
     return {"status": "API is running"}
