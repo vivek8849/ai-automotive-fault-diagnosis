@@ -213,7 +213,7 @@ ai-automotive-fault-diagnosis/
 
 ---
 
-## 🔮 Future Improvements
+## 🧩 Key Takeaways
 
 This project demonstrates:
 - End-to-end ML system design
